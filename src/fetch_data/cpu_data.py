@@ -17,16 +17,8 @@ def get_cpu_info():
         "cpu_type" : cpu_type,
     }
 
-
-# async def get_cpu_load():
-#     start = cpu_average()
-#     await asyncio.sleep(0.1)  # 100ms delay
-#     end = cpu_average()
-#     idle_diff = end["idle"] - start["idle"]
-#     total_diff = end["total"] - start["total"]
-#     percentage_of_cpu = 100 - int((100 * idle_diff) / total_diff)
-#     return percentage_of_cpu
-
+def get_cpu_load():
+    return psutil.cpu_percent(interval=1)
 if __name__ == "__main__":
     print(get_cpu_info())
 

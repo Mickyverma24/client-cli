@@ -1,0 +1,16 @@
+set auth_token customize ....
+set pc name
+turn on client
+turn of client
+reset token 
+reset pc name
+1. connection url
+2. set auth
+3. connect
+4. disconnect
+
+# improvements 
+boot time algorithm make new
+cpu percent any alternative
+percent data return values only 2 decimal place
+

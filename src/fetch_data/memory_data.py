@@ -6,7 +6,7 @@ def get_mem_data():
         'free_mem': data.available,
         'total_mem': data.total,
         'in_use_mem': data.used,
-        'mem_per': data.percent
+        'mem_per': data.percent / 100
     }
 
 def main():
