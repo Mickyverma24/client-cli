@@ -3,7 +3,10 @@
 A command-line client for connecting to the Performance Monitor server.
 
 ## Building Executables
-
+## Note < "" >
+- While using ClI tool or commands you will require auth-key or host url!
+- Both of this you can get from dash board ui just by copying on i button top right corner.
+  
 ### Prerequisites
 - Python 3.8 or higher
 - pip (Python package manager)
