@@ -16,5 +16,6 @@ class Exporter:
                 data = await get_data() if asyncio.iscoroutinefunction(get_data) else get_data()
                 await self.sio.emit("prefData", data) # emiting data to client
                 await asyncio.sleep(1) # additional halt for next one sec to provide each time data
+                logger.info("Sending data to the main server with socket id ")
         except asyncio.CancelledError:
             logger.info("Emission task cancelled. Cleaning up...")    

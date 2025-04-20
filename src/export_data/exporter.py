@@ -16,7 +16,7 @@ class Client:
         try:
             await self.sio.connect(
                 host_url,
-                auth={'token': auth_key},
+                auth={'token': auth_key, 'clientType':'cli'},
                 transports=['websocket']
             )
 
