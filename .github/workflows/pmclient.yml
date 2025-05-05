@@ -2,8 +2,10 @@ name: Build Cross-Platform CLI
 
 on:
   push:
-    branches: [ main ]  # Trigger build on pushes to main branch
-
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
 jobs:
   build:
     name: Build on ${{ matrix.os }}
