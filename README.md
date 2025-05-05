@@ -2,159 +2,50 @@
 
 A command-line client for connecting to the Performance Monitor server.
 
-## Building Executables
-## Note < "" >
-- While using ClI tool or commands you will require auth-key or host url!
-- Both of this you can get from dash board ui just by copying on i button top right corner.
-  
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+## Downloads
 
-### Installation Instructions
+Download the client for your operating system:
 
-#### For Linux Users:
-```bash
-# Install Python and pip if not already installed
-sudo apt update
-sudo apt install python3 python3-pip python3-venv
+- **Windows** : [Artifact download URL](https://github.com/Mickyverma24/client-cli/actions/runs/14834462307/artifacts/3061187537)
+- **Linux** : [Artifact download URL](https://github.com/Mickyverma24/client-cli/actions/runs/14834462307/artifacts/3061182521)
+- **Mac** : [Artifact download URL](https://github.com/Mickyverma24/client-cli/actions/runs/14834462307/artifacts/3061181427)
 
-# Clone the repository
-git clone <repository-url>
-cd client
+## Usage Instructions
 
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the executable
-python build.py
-
-# Make the executable file executable
-chmod +x dist/pmclient
-
-# Test the executable
-./dist/pmclient connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-```
-
-#### For macOS Users:
-```bash
-# Install Python and pip if not already installed
-# (If you don't have Homebrew, install it first: https://brew.sh/)
-brew install python
-
-# Clone the repository
-git clone <repository-url>
-cd client
-
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the executable
-python build.py
-
-# Make the executable file executable
-chmod +x dist/pmclient
-
-# Test the executable
-./dist/pmclient connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-```
-
-#### For Windows Users:
-```bash
-# Clone the repository
-git clone <repository-url>
-cd client
-
-# Create and activate virtual environment
-python -m venv venv
-.\venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the executable
-python build.py
-
-# Test the executable
-.\dist\pmclient.exe connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-```
-
-## Usage
-
-### Connecting to Server
-```bash
-# Linux/macOS
-./dist/pmclient connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-
-# Windows
-.\dist\pmclient.exe connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-```
-
-### Disconnecting from Server
-```bash
-# Linux/macOS
-./dist/pmclient disconnect
-
-# Windows
-.\dist\pmclient.exe disconnect
-```
-
-## Making the Command Available System-Wide
-
-### Linux/macOS:
-```bash
-# Create a symbolic link (requires sudo on Linux)
-sudo ln -s "$(pwd)/dist/pmclient" /usr/local/bin/pmclient
-
-# Now you can use the command from anywhere
-pmclient connect --auth-key YOUR_AUTH_KEY --host-url http://example.com
-```
+1. Download the client for your respective operating system.
+2. Connect to the main server using the following commands:
+3. Get your auth_key and host_url from the frontend or dashboard [Here](https://pmfrontend.netlify.app/)
 
 ### Windows:
-1. Add the `dist` directory to your system's PATH
-2. Open System Properties > Advanced > Environment Variables
-3. Under System Variables, find and select "Path"
-4. Click "Edit" and add the full path to your `dist` directory
-5. Click "OK" to save
 
-## Troubleshooting
+```cmd
+pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
+```
 
-### Common Issues:
+### Linux:
 
-#### Linux/macOS:
-- If you get "Permission denied" error:
-  ```bash
-  chmod +x dist/pmclient
-  ```
-- If you get "command not found" after adding to PATH:
-  ```bash
-  source ~/.bashrc  # or source ~/.zshrc for zsh users
-  ```
+```bash
+./pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
+```
 
-#### Windows:
-- If the executable doesn't run, make sure you're running Command Prompt or PowerShell as Administrator
-- If you get a security warning, you may need to unblock the file in Properties
+### macOS:
 
-## Platform-Specific Notes
+```bash
+./pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
+```
 
-### Windows
-- The executable is named `pmclient.exe`
-- You can add the `dist` directory to your PATH for global access
+4. To disconnect kill the terminal or just do
 
-### macOS
-- The executable is named `pmclient`
-- You may need to make it executable: `chmod +x pmclient`
-- If you get security warnings, you may need to allow the app in System Preferences > Security & Privacy
+```bash
+pmclient.exe disconnect
+./pmclient.exe disconnect
+```
 
-### Linux
-- The executable is named `pmclient`
-- You may need to make it executable: `chmod +x pmclient`
-- Some distributions might require additional dependencies for PyInstaller 
+## Notes
+
+- If you encounter any issues while downloading or using the CLI, please contact me at vermaravi8809@gmail.com
+- This is a simple CLI tool for connecting your computer or server to the main server via socket connection to monitor system performance.
+- Built using the psutil and platform libraries in Python.
+- It won't harm your pc tested with all os and it's open to public you can see code, Basic code are there.
+
+## How i Made this [Click Here](https://github.com/Mickyverma24/performance-hub-server)
