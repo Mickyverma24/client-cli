@@ -32,7 +32,7 @@ jobs:
           pyinstaller --onefile --name pmclient main.py
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pmclient-${{ runner.os }}
           path: dist/pmclient*
