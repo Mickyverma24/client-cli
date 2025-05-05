@@ -26,9 +26,13 @@ class MonitoringData:
 
     def get_cpu_load(self):
         """this will provide the load of the cpu in 1 second interval"""
-        return psutil.cpu_percent(interval=1)
+        return psutil.cpu_percent(interval=0.7)
 
-
+    def get_host_name(self):
+        """Getting the name of the owner of the server."""
+        host = socket.gethostname()
+        return host if host else "Someone unknown"
+    
     def get_mem_data(self):    
         data = psutil.virtual_memory()
         return {

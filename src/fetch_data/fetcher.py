@@ -18,6 +18,7 @@ def get_data():
         "cpuType": cpu_data['cpu_type'],
         "numCores": cpu_data['num_cores'],
         "cpuSpeed": cpu_data['cpu_speed'],
-        "cpuLoad": fetcher.get_cpu_load()  
+        "cpuLoad": fetcher.get_cpu_load(),
+        "hostName":fetcher.get_host_name()  
     }
     return data
