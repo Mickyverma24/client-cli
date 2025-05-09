@@ -25,13 +25,13 @@ pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
 ### Linux:
 
 ```bash
-./pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
+./pmclient connect --auth_key [your_api_key] --host_url [Host_URL]
 ```
 
 ### macOS:
 
 ```bash
-./pmclient.exe connect --auth_key [your_api_key] --host_url [Host_URL]
+./pmclient connect --auth_key [your_api_key] --host_url [Host_URL]
 ```
 
 4. To disconnect kill the terminal or just do
