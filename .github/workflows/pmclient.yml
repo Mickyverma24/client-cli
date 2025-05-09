@@ -2,8 +2,7 @@ name: Build and Release Cross-Platform CLI
 
 on:
   push:
-    tags:
-      - 'v*'  # Trigger only when pushing a version tag like v1.0.0
+    branches: [ main ]
     paths-ignore:
       - 'README.md'
       - 'docs/**'
@@ -38,8 +37,7 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          name: pmclient-${{ runner.os }}
-          tag_name: ${{ github.ref_name }}
+          tag_name: latest
           files: |
             dist/pmclient*
         env:
